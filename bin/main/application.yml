@@ -1,0 +1,20 @@
+security:
+  oauth2:
+    client:
+      userAuthorizationUri: 'http://localhost:18080/auth/oauth/authorize'
+      clientId: 'oauth_client'
+      clientSecret: 'secret'
+      accessTokenUri: 'http://localhost:18080/auth/oauth/token'
+      #client-authentication-scheme: form
+      #authenticationScheme: 'query' # Slackを利用する場合の設定値
+      #scope: 'identify' # Slackを利用する場合の設定値
+      #tokenName: 'token' # Slackを利用する場合の設定値
+      preEstablishedRedirectUri: http://localhost:8080/login
+      useCurrentUri: false
+    resource:
+      userInfoUri: 'http://localhost:18080/auth/userinfo' # Slackを利用する場合の設定値
+server:
+    port: 8080
+#    servlet:
+#     context-path: /ui
+
